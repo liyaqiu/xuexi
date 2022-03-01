@@ -1,6 +1,5 @@
 package com.sp.amqp.direct.dead;
 
-import com.sp.entity.UserEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.Exchange;
