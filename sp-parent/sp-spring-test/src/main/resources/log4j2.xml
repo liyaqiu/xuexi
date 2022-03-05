@@ -38,7 +38,13 @@
 
         <logger name="com.controller" level="debug" additivity="false">
             <appender-ref ref="kongzhitai"/>
-            <appender-ref ref="gundongwenjian"/>
+
         </logger>
+
+
+        <logger name="com.mybatisplus" level="debug" additivity="false">
+            <appender-ref ref="kongzhitai"/>
+        </logger>
+
     </loggers>
 </configuration>

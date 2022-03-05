@@ -21,6 +21,8 @@ import java.util.UUID;
 @Slf4j
 public class TestController5 {
 
+
+
     //利用ngxin代理，做集群认证
     //创建cookie
     @GetMapping("/login")

@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @author lyq
  * @date 2022/3/1 3:05
  */
-@Configuration
+//@Configuration
 public class InterceptorConfig {
     @Bean
     public WebMvcConfigurer webMvcConfigurer (){

@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * @author lyq
@@ -21,9 +20,11 @@ public class GlobalException {
         log.error("", exception);
         return new Result(exception.getMessage(),Result.FAIL);
     }
-    @ExceptionHandler(RuntimeException.class)
+    /*@ExceptionHandler(RuntimeException.class)
     public String doException2(RuntimeException exception){
         log.error("", exception);
         return "redirect:/hello.html";
-    }
+    }*/
+
+
 }

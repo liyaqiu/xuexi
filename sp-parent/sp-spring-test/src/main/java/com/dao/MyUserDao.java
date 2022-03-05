@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  */
 @Slf4j
 @Repository
-public class UserDao {
+public class MyUserDao {
 
 
 }
