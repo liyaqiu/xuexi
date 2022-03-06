@@ -1,6 +1,6 @@
 package com.config;
 
-import com.bean.User;
+import com.bean.UserBean;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -8,7 +8,6 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.context.ContextLoaderListener;
 
 /**
  * @author lyq
@@ -28,8 +27,8 @@ public class MyApplictionContext implements ApplicationContextAware {
     }
 
     @Bean(initMethod = "init",destroyMethod = "destory")
-    public User test0() {
-        return new User("liyaqiu");
+    public UserBean test0() {
+        return new UserBean("liyaqiu");
     }
 
 }

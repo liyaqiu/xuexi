@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class MybatisController {
 
     @Autowired //mybatis用了动态代理来调用映射文件中的方法
-    UserMapper userMapper;
+    UserNameMapper2 userNameMapper2;
 
 
     @GetMapping("/test")
     public void test() {
-        log.info("userMapper  {}",userMapper.getClass());
-        log.info("test1  {}",userMapper.delete("1000"));
+        log.info("userMapper  {}", userNameMapper2.getClass());
+        log.info("test1  {}", userNameMapper2.delete("1000"));
     }
 
 }

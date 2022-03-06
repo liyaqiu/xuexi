@@ -16,7 +16,7 @@ import javax.annotation.PreDestroy;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class UserBean {
     String name;
 
     //标注为spring bean初始化注解

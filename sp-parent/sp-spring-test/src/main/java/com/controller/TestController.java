@@ -2,8 +2,7 @@ package com.controller;
 
 import cn.bean.HelloUtils;
 import com.bean.Goods;
-import com.bean.People;
-import com.bean.User;
+import com.bean.UserBean;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * @author lyq
@@ -24,7 +22,7 @@ public class TestController {
 
     //@Autowired(required = false)
     @Autowired(required = true)
-    User user;
+    UserBean user;
 
     @Autowired //根据对象类型匹配
     HelloUtils helloUtils;

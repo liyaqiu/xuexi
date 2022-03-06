@@ -1,14 +1,11 @@
 package com.mybatisplus;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.plugins.pagination.PageDto;
-import com.baomidou.mybatisplus.extension.plugins.pagination.dialects.IDialect;
 import com.baomidou.mybatisplus.extension.plugins.pagination.dialects.MySqlDialect;
-import com.mybatisplus.entity.People;
+import com.mybatisplus.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,32 +18,32 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/mybatis1")
+@RequestMapping("/mybatisplus")
 //@Slf4j
-public class MybatisController1 {
+public class MybatisPlusController {
 
     private static final Logger log = LoggerFactory.getLogger("com.mybatisplus");
 
     @Autowired
-    PeopleMapper peopleMapper;
+    UserMapper userMapper;
 
 
     @GetMapping("/test")
     public void test() {
-        log.debug("peopleMapper class :{}",peopleMapper.getClass());
-        People people = peopleMapper.selectById("22225bf1-700d-4f53-9d7c-b238b882fad1");
-        log.info("people {}",people);
+        log.debug("peopleMapper class :{}", userMapper.getClass());
+        User user = userMapper.selectById("1");
+        log.info("user {}",user);
     }
     @GetMapping("/test2")
     public void test2() {
-        People people = peopleMapper.queryUserById("22225bf1-700d-4f53-9d7c-b238b882fad1");
-        log.info("people {}",people);
+        User user = userMapper.queryUserById("1");
+        log.info("user {}",user);
     }
 
     @GetMapping("/test3")
     public void test3() {
-        People people = peopleMapper.queryPeopleById("22225bf1-700d-4f53-9d7c-b238b882fad1");
-        log.info("people {}",people);
+        User user = userMapper.selectUserById("1");
+        log.info("user {}",user);
     }
 
     /**
@@ -66,10 +63,10 @@ public class MybatisController1 {
     @GetMapping("/test4")
     public void test4() {
         log.debug("分页查询");
-        IPage<People> page = new PageDto<>(2, 2);
-        peopleMapper.selectPage(page, null);
-        for (People people : page.getRecords()) {
-            log.info("当前页{}", people);
+        IPage<User> page = new PageDto<>(2, 2);
+        userMapper.selectPage(page, null);
+        for (User user : page.getRecords()) {
+            log.info("当前页{}", user);
         }
         log.info("当前页{}", page.getCurrent());
     }
@@ -77,13 +74,42 @@ public class MybatisController1 {
     //关联查询多字段映射
     @GetMapping("/test5")
     public void test5() {
-        log.debug("关联查询多字段映射");
-        List<People> peopleList = peopleMapper.selectPeoples();
-        for (People people : peopleList) {
-            log.info("当前页{}", people);
+        log.debug("一对多");
+        List<User> userList = userMapper.oneToMany();
+        for (User user : userList) {
+            log.info("当前页{}", user);
         }
     }
 
+    //关联查询多字段映射
+    @GetMapping("/test6")
+    public void test6() {
+        log.debug("一对多--注解方法");
+        List<User> userList = userMapper.oneToManyAnnotation();
+        for (User user : userList) {
+            log.info("当前页{}", user);
+        }
+    }
+
+    //关联查询多字段映射
+    @GetMapping("/test7")
+    public void test7() {
+        log.debug("多对多");
+        List<User> userList = userMapper.manyToMany();
+        for (User user : userList) {
+            log.info("当前页{}", user);
+        }
+    }
+
+    //关联查询多字段映射
+    @GetMapping("/test8")
+    public void test8() {
+        log.debug("多对多--注解");
+        List<User> userList = userMapper.manyToManyAnnotation();
+        for (User user : userList) {
+            log.info("当前页{}", user);
+        }
+    }
 
 
 }
