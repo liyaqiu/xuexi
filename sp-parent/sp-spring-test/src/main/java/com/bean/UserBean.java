@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -16,6 +17,7 @@ import javax.annotation.PreDestroy;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Component
 public class UserBean {
     String name;
 

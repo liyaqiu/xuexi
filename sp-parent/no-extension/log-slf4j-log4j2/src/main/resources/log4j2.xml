@@ -2,7 +2,9 @@
 <!--日志级别以及优先级排序: OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
 <configuration status="WARN" monitorInterval="1800">
     <Properties>
-        <property name="geshi" value="%d{HH:mm:ss.SSS} [%-5level] [%thread] %c %m%n"/>
+        <property name="geshi" value="%d{HH:mm:ss.SSS} %pid [%-5level] [%thread] %c : %m%n"/>
+        <!--<property name="geshi" value="%d{HH:mm:ss.SSS} %pid [%-5level] [%-16thread] %c : %m%n"/>-->
+        <!--<property name="geshi" value="%d{HH:mm:ss.SSS} %pid [%-5level] [%-16.16thread] %40.40c : %m%n"/>-->
     </Properties>
 
     <appenders>

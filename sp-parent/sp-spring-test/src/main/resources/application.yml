@@ -9,9 +9,6 @@ mybatis-plus:
     - classpath:mybatis/mapper/*Mapper.xml  #mapper文件
   type-aliases-package: com.mybatisplus.entity #实体类别名包
 
-#pagehelper:
-#  helperDialect: mysql
-#  reasonable: true
 
 spring:
   datasource:
@@ -36,11 +33,11 @@ spring:
   #      connection-test-query: SELECT 1
 
 
-  resources:
+  resources: #web资源
     static-locations:
       - classpath:/abc/
       - classpath:/static/
-  aop:
+  aop:  #自动动态代理
     auto: true
     proxy-target-class: false
 
@@ -61,6 +58,7 @@ spring:
 
 myconfig:
   path: /root/nginx
-  name: liyaqiu-yaml
-  age: 31-yaml
+  name: liyaqiu-yaml2222
+  age: 16
+  max: 0127
 

@@ -28,9 +28,11 @@ public class UserServiceImpl {
         int a = 1/0;
     }
 
-    @Transactional(isolation = Isolation.REPEATABLE_READ,propagation = Propagation.REQUIRED)
+    @Transactional(isolation = Isolation.REPEATABLE_READ,propagation = Propagation.REQUIRED,timeout = 5)
     public void test1() {
         log.info("{} {}","service test1",this.getClass());
-        userDao.insert(new User(UUID.randomUUID().toString(), "liyaqiu", "12"));
+        //userDao.insert(new User(UUID.randomUUID().toString(), "liyaqiu", "12"));
+        User user  = new User("1", "liyaqiu11", "21");
+        userDao.updateById(user);
     }
 }

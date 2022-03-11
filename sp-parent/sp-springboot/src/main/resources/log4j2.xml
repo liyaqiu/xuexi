@@ -36,18 +36,16 @@
             <appender-ref ref="kongzhitai"/>
         </root>
 
-        <logger name="com.controller" level="debug" additivity="false">
+        <AsyncLogger name="com.controller" level="debug" includeLocation="false" additivity="false">
             <appender-ref ref="kongzhitai"/>
-
-        </logger>
-
-
-        <logger name="com.mybatisplus" level="debug" additivity="false">
+<!--            <appender-ref ref="gundongwenjian"/>-->
+        </AsyncLogger>
+        <AsyncLogger name="com.dao" level="debug" includeLocation="false" additivity="false">
             <appender-ref ref="kongzhitai"/>
-        </logger>
-
-        <logger name="com.config" level="debug" additivity="false">
+        </AsyncLogger>
+        <AsyncLogger name="test.LogTest" level="debug" includeLocation="false" additivity="false">
             <appender-ref ref="kongzhitai"/>
-        </logger>
+        </AsyncLogger>
+
     </loggers>
 </configuration>

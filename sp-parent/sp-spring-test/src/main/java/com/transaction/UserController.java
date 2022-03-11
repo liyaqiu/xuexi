@@ -1,6 +1,9 @@
 package com.transaction;
 
+import com.github.benmanes.caffeine.cache.CacheLoader;
 import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.nullness.qual.NonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,9 +36,9 @@ public class UserController {
     }
 
     @GetMapping("/test3")
-    @Transactional//事物传播
     public void test3(){
         log.info("controller test3 {}",userService.getClass());
         userService.test1();
     }
+
 }

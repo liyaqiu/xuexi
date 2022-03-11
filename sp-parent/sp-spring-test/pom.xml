@@ -45,6 +45,37 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
 
+        <!--数据校验jsr303规范-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+        <!--数据校验实现-->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+
+        <!--dto转换框架-->
+        <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
+        <!--<dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.4.2.Final</version>
+        </dependency>-->
+
+        <!--各种util包装类-->
+        <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+        <!--<dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.13</version>
+        </dependency>-->
+
+
+
+
+
     </dependencies>
 
 </project>
