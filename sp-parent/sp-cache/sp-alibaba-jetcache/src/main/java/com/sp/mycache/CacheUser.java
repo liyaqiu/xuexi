@@ -1,9 +1,11 @@
-package com.cache;
+package com.sp.mycache;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * @author lyq
@@ -13,7 +15,8 @@ import lombok.ToString;
 @Setter
 @ToString
 @AllArgsConstructor
-public class CacheUser {
+
+public class CacheUser implements Serializable {
     String id;
     String name;
     String age;

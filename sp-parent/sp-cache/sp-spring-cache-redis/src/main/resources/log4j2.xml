@@ -36,7 +36,7 @@
             <appender-ref ref="kongzhitai"/>
         </root>
 
-        <logger name="com.cache" level="debug" additivity="false">
+        <logger name="com.sp.mycache" level="debug" additivity="false">
             <appender-ref ref="kongzhitai"/>
         </logger>
     </loggers>

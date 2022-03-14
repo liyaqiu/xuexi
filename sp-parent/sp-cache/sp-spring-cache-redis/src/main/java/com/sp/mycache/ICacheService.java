@@ -1,4 +1,4 @@
-package com.cache;
+package com.sp.mycache;
 
 /**
  * @author lyq

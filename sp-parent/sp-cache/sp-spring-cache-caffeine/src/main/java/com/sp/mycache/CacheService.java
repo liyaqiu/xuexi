@@ -1,4 +1,4 @@
-package com.cache;
+package com.sp.mycache;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.Cacheable;

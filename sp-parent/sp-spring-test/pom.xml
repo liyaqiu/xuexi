@@ -56,6 +56,14 @@
             <artifactId>hibernate-validator</artifactId>
         </dependency>
 
+        <!--定时任务-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+        </dependency>
+
+
+
         <!--dto转换框架-->
         <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
         <!--<dependency>

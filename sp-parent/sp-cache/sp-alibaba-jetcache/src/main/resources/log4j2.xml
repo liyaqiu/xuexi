@@ -36,8 +36,8 @@
             <appender-ref ref="kongzhitai"/>
         </root>
 
-        <logger name="com.sp.mycache" level="debug" additivity="false">
-            <appender-ref ref="kongzhitai"/>
-        </logger>
+<!--        <logger name="com.sp.mycache" level="debug" additivity="false">-->
+<!--            <appender-ref ref="kongzhitai"/>-->
+<!--        </logger>-->
     </loggers>
 </configuration>
