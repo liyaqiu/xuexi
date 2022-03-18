@@ -42,10 +42,11 @@ spring:
         await-termination-period: 10s #调度线程关闭前最大等待时间，确保最后一定关闭
 
 
-  resources: #web资源
-    static-locations:
-      - classpath:/abc/
-      - classpath:/static/
+#  resources: #web资源
+#    static-locations:
+#      - classpath:/abc/
+#      - classpath:/static/
+
   aop:  #自动动态代理
     auto: true
     proxy-target-class: false
