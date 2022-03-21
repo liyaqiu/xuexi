@@ -70,5 +70,5 @@ myconfig:
   path: /root/nginx
   name: liyaqiu-yaml2222
   age: 16
-  max: 0127
+  max: 0127 #8进制
 

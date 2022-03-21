@@ -20,7 +20,7 @@
             <appender-ref ref="kongzhitai"/>
         </root>
 
-       <!--<logger name="com.sp.controller" level="debug" additivity="false">
+       <!--<logger name="com.sp.cookie" level="debug" additivity="false">
             <appender-ref ref="kongzhitai"/>
         </logger>
 -->
