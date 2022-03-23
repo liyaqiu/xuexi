@@ -62,8 +62,6 @@
             <artifactId>spring-boot-starter-quartz</artifactId>
         </dependency>
 
-
-
         <!--dto转换框架-->
         <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
         <!--<dependency>
@@ -79,9 +77,6 @@
             <artifactId>hutool-all</artifactId>
             <version>5.7.13</version>
         </dependency>-->
-
-
-
 
 
     </dependencies>
