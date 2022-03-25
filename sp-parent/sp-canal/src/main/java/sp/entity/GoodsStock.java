@@ -13,4 +13,6 @@ public class GoodsStock {
     String id;
     int count;
     String goodsId;
+
+
 }
