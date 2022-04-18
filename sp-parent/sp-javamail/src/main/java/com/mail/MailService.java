@@ -23,7 +23,7 @@ public class MailService {
     public void sendSimpleMail(){
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("361234567@qq.com(eric)");
-        message.setTo("1262885678@qq.com");
+        message.setTo("361234567@qq.com");
         message.setSubject("今天记得学习!");
         message.setText("好好学习，天天向上。");
         javaMailSender.send(message);
